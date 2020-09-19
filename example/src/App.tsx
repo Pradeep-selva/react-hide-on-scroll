@@ -4,7 +4,7 @@ import { ExampleComponent } from 'react-hide-on-scroll'
 import 'react-hide-on-scroll/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <ExampleComponent text='Testing component 😔' />
 }
 
 export default App
