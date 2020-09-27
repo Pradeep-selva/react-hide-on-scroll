@@ -1,21 +1,8 @@
 import React from "react";
 import { getOffset } from "../../util";
+import { HideOnProps, HideOnState } from "../../Interfaces";
 
-export interface HideBetweenProps {
-  children: React.ReactNode;
-  inverse?: Boolean;
-  divID?: String;
-  offset?: number;
-  height?: number;
-  atDiv?: Boolean;
-  atHeight?: Boolean;
-}
-
-export interface HideBetweenState {
-  show: Boolean | undefined;
-}
-
-class HideBetween extends React.Component<HideBetweenProps, HideBetweenState> {
+class HideBetween extends React.Component<HideOnProps, HideOnState> {
   state = {
     show: false,
   };
