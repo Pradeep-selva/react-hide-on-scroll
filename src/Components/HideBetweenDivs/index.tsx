@@ -5,10 +5,10 @@ interface Props {
   inverse?: Boolean;
   startDivID?: String;
   endDivID?: String;
-  startDivOffset?: Number;
-  endDivOffset?: Number;
-  startHeight?: Number;
-  endHeight?: Number;
+  startDivOffset?: number;
+  endDivOffset?: number;
+  startHeight?: number;
+  endHeight?: number;
   div?: Boolean;
   height?: Boolean;
 }
@@ -31,7 +31,7 @@ class HideBetweenDivs extends React.Component<Props, State> {
   }
 
   listenToScroll = () => {
-    const offset = (el: HTMLElement | null): Number => {
+    const offset = (el: HTMLElement | null): number => {
       const rect: DOMRect | undefined = el?.getBoundingClientRect(),
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       return rect!.top + scrollTop;
@@ -44,6 +44,8 @@ class HideBetweenDivs extends React.Component<Props, State> {
       endHeight,
       height,
       inverse,
+      startDivOffset,
+      endDivOffset,
     } = this.props;
 
     let startDiv: HTMLElement | null = null,
@@ -54,15 +56,18 @@ class HideBetweenDivs extends React.Component<Props, State> {
       endDiv = document.querySelector(`#${endDivID}`) as HTMLElement;
     }
 
-    let startDivTopOffset: Number | undefined = height
+    let startDivTopOffset: number = height
       ? startHeight || 0
       : offset(startDiv);
 
-    let endDivTopOffset: Number | undefined = height
-      ? endHeight || 0
-      : offset(endDiv);
+    let endDivTopOffset: number = height ? endHeight || 0 : offset(endDiv);
 
-    const winScroll: Number =
+    if (!height) {
+      if (startDivOffset) startDivTopOffset += startDivOffset;
+      else if (endDivOffset) endDivTopOffset += endDivOffset;
+    }
+
+    const winScroll: number =
       document.body.scrollTop || document.documentElement.scrollTop;
 
     if (winScroll >= startDivTopOffset && winScroll <= endDivTopOffset) {
