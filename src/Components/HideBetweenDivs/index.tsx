@@ -37,23 +37,30 @@ class HideBetweenDivs extends React.Component<Props, State> {
       return rect!.top + scrollTop;
     };
 
+    const {
+      div,
+      startDivID,
+      endDivID,
+      startHeight,
+      endHeight,
+      height,
+      inverse,
+    } = this.props;
+
     let startDiv: HTMLElement | null = null,
       endDiv: HTMLElement | null = null;
 
-    if (!this.props.div) {
-      startDiv = document.querySelector(
-        `#${this.props.startDivID}`
-      ) as HTMLElement;
-
-      endDiv = document.querySelector(`#${this.props.endDivID}`) as HTMLElement;
+    if (!div) {
+      startDiv = document.querySelector(`#${startDivID}`) as HTMLElement;
+      endDiv = document.querySelector(`#${endDivID}`) as HTMLElement;
     }
 
-    let startDivTopOffset: Number | undefined = this.props.height
-      ? this.props.startHeight || 0
+    let startDivTopOffset: Number | undefined = height
+      ? startHeight || 0
       : offset(startDiv);
 
-    let endDivTopOffset: Number | undefined = this.props.height
-      ? this.props.endHeight || 0
+    let endDivTopOffset: Number | undefined = height
+      ? endHeight || 0
       : offset(endDiv);
 
     const winScroll: Number =
@@ -61,11 +68,11 @@ class HideBetweenDivs extends React.Component<Props, State> {
 
     if (winScroll >= startDivTopOffset && winScroll <= endDivTopOffset) {
       this.setState({
-        show: this.props.inverse,
+        show: inverse,
       });
     } else {
       this.setState({
-        show: !this.props.inverse,
+        show: !inverse,
       });
     }
   };
