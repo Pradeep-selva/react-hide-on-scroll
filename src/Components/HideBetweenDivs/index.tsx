@@ -38,7 +38,6 @@ class HideBetweenDivs extends React.Component<Props, State> {
     };
 
     const {
-      div,
       startDivID,
       endDivID,
       startHeight,
@@ -50,7 +49,7 @@ class HideBetweenDivs extends React.Component<Props, State> {
     let startDiv: HTMLElement | null = null,
       endDiv: HTMLElement | null = null;
 
-    if (!div) {
+    if (!height) {
       startDiv = document.querySelector(`#${startDivID}`) as HTMLElement;
       endDiv = document.querySelector(`#${endDivID}`) as HTMLElement;
     }
