@@ -1,0 +1,23 @@
+.div {
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 10vw;
+  color: whitesmoke;
+}
+
+.sticky {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0px;
+  left: 40vw;
+  background-color: pink;
+  min-width: 20vw;
+  min-height: 10vw;
+  font-weight: 900;
+  font-size: 2vw;
+}
