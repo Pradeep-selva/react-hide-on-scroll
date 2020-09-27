@@ -15,10 +15,21 @@
   justify-content: center;
   position: fixed;
   bottom: 0px;
-  left: 40vw;
   background-color: pink;
   min-width: 20vw;
   min-height: 10vw;
   font-weight: 900;
   font-size: 2vw;
+}
+
+.hide1to3 {
+  left: 20vw;
+}
+
+.show1to3 {
+  left: 40vw;
+}
+
+.hideHeight {
+  left: 65vw;
 }
