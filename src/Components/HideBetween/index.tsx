@@ -1,23 +1,8 @@
 import React from "react";
+import { getOffset } from "../../util";
+import { HideBetweenProps, HideBetweenState } from "../../Interfaces";
 
-interface Props {
-  children: React.ReactNode;
-  inverse?: Boolean;
-  startDivID?: String;
-  endDivID?: String;
-  startDivOffset?: number;
-  endDivOffset?: number;
-  startHeight?: number;
-  endHeight?: number;
-  div?: Boolean;
-  height?: Boolean;
-}
-
-interface State {
-  show: Boolean | undefined;
-}
-
-class HideBetween extends React.Component<Props, State> {
+class HideBetween extends React.Component<HideBetweenProps, HideBetweenState> {
   state = {
     show: false,
   };
@@ -31,12 +16,6 @@ class HideBetween extends React.Component<Props, State> {
   }
 
   listenToScroll = () => {
-    const offset = (el: HTMLElement | null): number => {
-      const rect: DOMRect | undefined = el?.getBoundingClientRect(),
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      return rect!.top + scrollTop;
-    };
-
     const {
       startDivID,
       endDivID,
@@ -58,9 +37,9 @@ class HideBetween extends React.Component<Props, State> {
 
     let startDivTopOffset: number = height
       ? startHeight || 0
-      : offset(startDiv);
+      : getOffset(startDiv);
 
-    let endDivTopOffset: number = height ? endHeight || 0 : offset(endDiv);
+    let endDivTopOffset: number = height ? endHeight || 0 : getOffset(endDiv);
 
     if (!height) {
       if (startDivOffset) startDivTopOffset += startDivOffset;
