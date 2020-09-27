@@ -36,6 +36,11 @@ const App = () => {
           visible from div 1 to 3
         </div>
       </HideBetweenDivs>
+      <HideBetweenDivs startDivOffset={950} startDivID="first" endDivID="third">
+        <div className={classNames(styles.hide1to3Offset, styles.sticky)}>
+          hidden from div 1 to 3 with 950px start offset
+        </div>
+      </HideBetweenDivs>
       <HideBetweenDivs height startHeight={900} endHeight={1900}>
         <div className={classNames(styles.hideHeight, styles.sticky)}>
           hidden from 900px to 1900px

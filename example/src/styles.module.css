@@ -16,14 +16,14 @@
   position: fixed;
   bottom: 0px;
   background-color: pink;
-  min-width: 20vw;
+  width: 20vw;
   min-height: 10vw;
   font-weight: 900;
   font-size: 2vw;
 }
 
 .hide1to3 {
-  left: 20vw;
+  left: 22vw;
 }
 
 .show1to3 {
@@ -32,4 +32,12 @@
 
 .hideHeight {
   left: 65vw;
+}
+
+.hide1to3Offset {
+  left: 0;
+}
+
+.show1to3Offset {
+  left: 0;
 }
