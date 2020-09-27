@@ -14,7 +14,7 @@ interface Props {
 }
 
 interface State {
-  show: Boolean;
+  show: Boolean | undefined;
 }
 
 class HideBetweenDivs extends React.Component<Props, State> {
@@ -31,32 +31,32 @@ class HideBetweenDivs extends React.Component<Props, State> {
   }
 
   listenToScroll = () => {
-    function offset(el: HTMLElement): Number {
-      let rect = el.getBoundingClientRect(),
+    const offset = (el: HTMLElement): Number => {
+      const rect: DOMRect = el.getBoundingClientRect(),
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       return rect.top + scrollTop;
-    }
+    };
 
     let gameDiv = document.querySelector(
       `#${this.props.startDivID}`
     ) as HTMLElement;
-    let gameDivTopOffset = offset(gameDiv);
+    let gameDivTopOffset: Number = offset(gameDiv);
 
     let featuredDiv = document.querySelector(
       `#${this.props.endDivID}`
     ) as HTMLElement;
-    let featuredDivTopOffset = offset(featuredDiv);
+    let featuredDivTopOffset: Number = offset(featuredDiv);
 
-    const winScroll =
+    const winScroll: Number =
       document.body.scrollTop || document.documentElement.scrollTop;
 
     if (winScroll >= gameDivTopOffset && winScroll <= featuredDivTopOffset) {
       this.setState({
-        show: true,
+        show: !this.props.inverse,
       });
     } else {
       this.setState({
-        show: false,
+        show: this.props.inverse,
       });
     }
   };

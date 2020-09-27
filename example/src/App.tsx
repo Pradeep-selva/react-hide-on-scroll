@@ -26,7 +26,7 @@ const App = () => {
         fourth div
       </div>
       <HideBetweenDivs startDivID="first" endDivID="third">
-        <div className={styles.sticky}>visible from div 1 to 3</div>
+        <div className={styles.sticky}>hidden from div 1 to 3</div>
       </HideBetweenDivs>
     </>
   );
