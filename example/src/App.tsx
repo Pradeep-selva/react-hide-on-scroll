@@ -46,7 +46,7 @@ const App = () => {
           hidden from 900px to 1900px
         </div>
       </HideBetweenDivs>
-      <HideBetweenDivs height startHeight={900} endHeight={1900}>
+      <HideBetweenDivs height inverse startHeight={900} endHeight={1900}>
         <div className={classNames(styles.hideHeight, styles.sticky)}>
           visible from 900px to 1900px
         </div>
