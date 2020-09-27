@@ -41,3 +41,13 @@
 .show1to3Offset {
   left: 0;
 }
+
+.hideOnDiv {
+  left: 40vw;
+  bottom: 90vh;
+}
+
+.hideOnHeight {
+  left: 18vw;
+  bottom: 90vh;
+}

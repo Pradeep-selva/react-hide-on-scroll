@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import styles from "./styles.module.css";
-import { HideBetween } from "react-hide-on-scroll";
+import { HideBetween, HideOn } from "react-hide-on-scroll";
 
 const App = () => {
   return (
@@ -26,6 +26,30 @@ const App = () => {
       <div className={styles.div} style={{ backgroundColor: "orange" }}>
         fourth div
       </div>
+
+      <HideOn divID="third">
+        <div className={classNames(styles.sticky, styles.hideOnDiv)}>
+          Hidden from third div
+        </div>
+      </HideOn>
+
+      <HideOn inverse divID="third">
+        <div className={classNames(styles.sticky, styles.hideOnDiv)}>
+          Shown from third div
+        </div>
+      </HideOn>
+
+      <HideOn height={1200}>
+        <div className={classNames(styles.sticky, styles.hideOnHeight)}>
+          Hidden from 1200px height
+        </div>
+      </HideOn>
+
+      <HideOn inverse height={1200}>
+        <div className={classNames(styles.sticky, styles.hideOnHeight)}>
+          Shown from 1200px height
+        </div>
+      </HideOn>
 
       <HideBetween div startDivID="first" endDivID="third">
         <div className={classNames(styles.hide1to3, styles.sticky)}>
