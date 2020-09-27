@@ -17,7 +17,7 @@ interface State {
   show: Boolean | undefined;
 }
 
-class HideBetweenDivs extends React.Component<Props, State> {
+class HideBetween extends React.Component<Props, State> {
   state = {
     show: false,
   };
@@ -88,4 +88,4 @@ class HideBetweenDivs extends React.Component<Props, State> {
   }
 }
 
-export default HideBetweenDivs;
+export default HideBetween;

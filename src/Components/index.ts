@@ -1,1 +1,1 @@
-export { default as HideBetweenDivs } from './HideBetweenDivs'
+export { default as HideBetween } from "./HideBetween";
