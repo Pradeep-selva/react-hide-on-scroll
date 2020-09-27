@@ -31,32 +31,41 @@ class HideBetweenDivs extends React.Component<Props, State> {
   }
 
   listenToScroll = () => {
-    const offset = (el: HTMLElement): Number => {
-      const rect: DOMRect = el.getBoundingClientRect(),
+    const offset = (el: HTMLElement | null): Number => {
+      const rect: DOMRect | undefined = el?.getBoundingClientRect(),
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      return rect.top + scrollTop;
+      return rect!.top + scrollTop;
     };
 
-    let gameDiv = document.querySelector(
-      `#${this.props.startDivID}`
-    ) as HTMLElement;
-    let gameDivTopOffset: Number = offset(gameDiv);
+    let startDiv: HTMLElement | null = null,
+      endDiv: HTMLElement | null = null;
 
-    let featuredDiv = document.querySelector(
-      `#${this.props.endDivID}`
-    ) as HTMLElement;
-    let featuredDivTopOffset: Number = offset(featuredDiv);
+    if (!this.props.div) {
+      startDiv = document.querySelector(
+        `#${this.props.startDivID}`
+      ) as HTMLElement;
+
+      endDiv = document.querySelector(`#${this.props.endDivID}`) as HTMLElement;
+    }
+
+    let startDivTopOffset: Number | undefined = this.props.height
+      ? this.props.startHeight || 0
+      : offset(startDiv);
+
+    let endDivTopOffset: Number | undefined = this.props.height
+      ? this.props.endHeight || 0
+      : offset(endDiv);
 
     const winScroll: Number =
       document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (winScroll >= gameDivTopOffset && winScroll <= featuredDivTopOffset) {
+    if (winScroll >= startDivTopOffset && winScroll <= endDivTopOffset) {
       this.setState({
-        show: !this.props.inverse,
+        show: this.props.inverse,
       });
     } else {
       this.setState({
-        show: this.props.inverse,
+        show: !this.props.inverse,
       });
     }
   };
