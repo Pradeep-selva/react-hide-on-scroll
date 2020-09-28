@@ -2,9 +2,17 @@
 <div align="center">
   <strong>A react component library to hide/show elements based on scroll</strong>
   <p><a href="https://pradeep-selva.github.io/react-hide-on-scroll/">View Demo</a></p>
+  <p><a href="https://www.npmjs.com/package/react-hide-on-scroll">Visit on npm</a></p>
+  <iframe src="https://ghbtns.com/github-btn.html?user=Pradeep-selva&repo=react-hide-on-scroll&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 </div>
 
-## Usage
+## Installation
+
+- To install from npm, run-
+
+```
+npm install --save react-hide-on-scroll
+```
 
 - To install locally, clone this repo and in root directory, run-
 
@@ -12,7 +20,9 @@
 npm run setup
 ```
 
-- Pass the element to be hidden as a children to the components.
+## Usage
+
+- Pass the element to be hidden as children to the components.
 
 ```js
 <HideBetween div startDivID="first" endDivID="third">
