@@ -1,6 +1,6 @@
 {
   "name": "react-hide-on-scroll",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A react component library to hide/show elements based on scroll",
   "author": "Pradeep-selva",
   "license": "MIT",
@@ -55,5 +55,13 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "react",
+    "hide",
+    "scroll",
+    "scrolling",
+    "conditional hiding",
+    "typescript"
   ]
 }
