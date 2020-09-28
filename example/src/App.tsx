@@ -15,6 +15,8 @@ const App = () => {
         <a
           className={styles.link}
           href="https://github.com/Pradeep-selva/react-hide-on-scroll/tree/master/example"
+          target="_blank"
+          rel="noreferrer noopener"
         >
           View Code
         </a>
