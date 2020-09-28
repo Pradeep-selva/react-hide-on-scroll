@@ -16,15 +16,17 @@ npm run setup
 
 ```js
 <HideBetween div startDivID="first" endDivID="third">
-    <div className={classNames(styles.hide1to3, styles.sticky)}>
-        hidden from div 1 to 3
-    </div>
+  <div className={classNames(styles.hide1to3, styles.sticky)}>
+    hidden from div 1 to 3
+  </div>
 </HideBetween>
+```
 
+```js
 <HideOn divID="third">
-    <div className={classNames(styles.sticky, styles.hideOnDiv)}>
-        Hidden from third div
-    </div>
+  <div className={classNames(styles.sticky, styles.hideOnDiv)}>
+    Hidden from third div
+  </div>
 </HideOn>
 ```
 
