@@ -9,6 +9,11 @@
   text-shadow: 4px 3px 8px rgba(35, 15, 9, 0.7);
 }
 
+.star {
+  margin-top: 5vh;
+  margin-left: 40%;
+}
+
 .link {
   font-size: 4vw;
   text-decoration: none;

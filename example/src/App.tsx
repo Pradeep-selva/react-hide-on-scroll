@@ -20,6 +20,15 @@ const App = () => {
         >
           View Code
         </a>
+        <iframe
+          src="https://ghbtns.com/github-btn.html?user=Pradeep-selva&repo=react-hide-on-scroll&type=star&count=true&size=large"
+          frameBorder="0"
+          scrolling="0"
+          width="200"
+          height="50"
+          title="GitHub"
+          className={styles.star}
+        ></iframe>
       </div>
       <div className={styles.div} style={{ backgroundColor: "red" }}>
         second div
