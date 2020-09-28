@@ -44,6 +44,8 @@ npm run setup
 <details>
   <summary>HideBetween</summary>
 
+To hide an element between 2 divs or between 2 specified heights(px)
+
 |     Props      | Description                                                                       | Type      | isOptional |
 | :------------: | --------------------------------------------------------------------------------- | --------- | ---------- |
 |    children    | The required react element that needs to be hidden                                | ReactNode | false      |
@@ -61,6 +63,8 @@ npm run setup
 
 <details>
   <summary>HideOn</summary>
+
+To hide an element when reached a div or a specified height(px)
 
 |  Props   | Description                                                                       | Type      | isOptional |
 | :------: | --------------------------------------------------------------------------------- | --------- | ---------- |
