@@ -9,6 +9,33 @@
   text-shadow: 4px 3px 8px rgba(35, 15, 9, 0.7);
 }
 
+.link {
+  font-size: 4vw;
+  text-decoration: none;
+  border: 5px solid #4dbfc9;
+  background: none;
+  text-align: center;
+  border-radius: 50px;
+  color: #4dbfc9;
+  font-weight: 500;
+  margin-top: 5vh;
+  transition: letter-spacing 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.link:hover {
+  color: white;
+  letter-spacing: 5px;
+  padding: 5px 5px;
+  border: none;
+  background: rgb(77, 191, 201);
+  background: linear-gradient(
+    180deg,
+    rgba(77, 191, 201, 1) 25%,
+    rgba(39, 132, 156, 1) 80%
+  );
+  text-shadow: none;
+}
+
 .sticky {
   display: grid;
   align-content: center;

@@ -12,6 +12,12 @@ const App = () => {
         style={{ backgroundColor: "green" }}
       >
         first div
+        <a
+          className={styles.link}
+          href="https://github.com/Pradeep-selva/react-hide-on-scroll/tree/master/example"
+        >
+          View Code
+        </a>
       </div>
       <div className={styles.div} style={{ backgroundColor: "red" }}>
         second div
