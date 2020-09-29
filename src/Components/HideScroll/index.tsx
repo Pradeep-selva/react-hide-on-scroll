@@ -1,14 +1,5 @@
 import React from "react";
-
-interface HideProps {
-  children: React.ReactNode;
-  variant?: "up" | "down";
-}
-
-interface HideState {
-  show: Boolean;
-  prevYOffset: number;
-}
+import { HideProps, HideState } from "../../Interfaces";
 
 class HideScroll extends React.Component<HideProps, HideState> {
   public static defaultProps = {
