@@ -95,6 +95,18 @@ To hide/show an element when reached a div or a specified height(px)
 </details>
 
 <details>
+  <summary>HideDuring</summary>
+
+To hide/show an element during a scroll. (scroll to make element hidden/shown)
+
+|  Props   | Description                                           | Type      | isOptional |
+| :------: | ----------------------------------------------------- | --------- | ---------- |
+| children | The required react element that needs to be hidden    | ReactNode | false      |
+| inverse  | Shows an element while scrolling instead of hiding it | Boolean   | true       |
+
+</details>
+
+<details>
   <summary>Hide</summary>
 
 To hide an element on scrolling up or down.
@@ -103,18 +115,6 @@ To hide an element on scrolling up or down.
 | :------: | --------------------------------------------------------------------------------------- | -------------- | ---------- |
 | children | The required react element that needs to be hidden                                      | ReactNode      | false      |
 | variant  | To specify whether the element must be hidden on scrolling up or down (down by default) | "up" or "down" | true       |
-
-</details>
-
-<details>
-  <summary>Hide</summary>
-
-To hide/show an element during a scroll. (scroll to make element hidden/shown)
-
-|  Props   | Description                                           | Type      | isOptional |
-| :------: | ----------------------------------------------------- | --------- | ---------- |
-| children | The required react element that needs to be hidden    | ReactNode | false      |
-| inverse  | Shows an element while scrolling instead of hiding it | Boolean   | true       |
 
 </details>
 
