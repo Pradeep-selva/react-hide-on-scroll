@@ -45,8 +45,14 @@ const App = () => {
       </div>
 
       <HideScroll variant="down">
-        <div className={classNames(styles.sticky, styles.hideScroll)}>
+        <div className={classNames(styles.sticky, styles.hideScrollDown)}>
           Hidden on scrolling down
+        </div>
+      </HideScroll>
+
+      <HideScroll variant="up">
+        <div className={classNames(styles.sticky, styles.hideScrollUp)}>
+          Hidden on scrolling up
         </div>
       </HideScroll>
 

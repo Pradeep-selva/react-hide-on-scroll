@@ -74,11 +74,14 @@
   left: 0;
 }
 
-.hideScroll {
+.hideScrollDown {
   left: 0;
-  bottom: 25vh;
+  bottom: 40vh;
 }
-
+.hideScrollUp {
+  right: 0;
+  bottom: 40vh;
+}
 .hideOnDiv {
   left: 40vw;
   bottom: 85vh;
