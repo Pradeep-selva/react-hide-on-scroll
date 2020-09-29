@@ -1,13 +1,5 @@
 import React from "react";
-
-interface HideDuringProps {
-  children: React.ReactNode;
-  inverse?: Boolean;
-}
-
-interface HideDuringState {
-  show: Boolean;
-}
+import { HideDuringProps, HideDuringState } from "../../Interfaces";
 
 class HideDuring extends React.Component<HideDuringProps, HideDuringState> {
   timeout: NodeJS.Timeout | null = null;
