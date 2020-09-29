@@ -3,8 +3,7 @@ import React from "react";
 interface HideProps {
   children: React.ReactNode;
   variant?: "up" | "down";
-  start?: number;
-  end?: number;
+  offset?: number;
 }
 
 interface HideState {
@@ -19,7 +18,8 @@ class HideScroll extends React.Component<HideProps, HideState> {
 
   state = {
     show: false,
-    prevYOffset: window.pageYOffset,
+    prevYOffset:
+      window.pageYOffset + (this.props.offset ? this.props.offset : 0),
   };
 
   componentDidMount() {
