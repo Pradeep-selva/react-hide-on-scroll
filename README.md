@@ -78,6 +78,18 @@ To hide an element when reached a div or a specified height(px)
 
 </details>
 
+<details>
+  <summary>Hide</summary>
+
+To hide an element on scrolling up or down.
+
+|  Props   | Description                                                                             | Type           | isOptional |
+| :------: | --------------------------------------------------------------------------------------- | -------------- | ---------- |
+| children | The required react element that needs to be hidden                                      | ReactNode      | false      |
+| variant  | To specify whether the element must be hidden on scrolling up or down (down by default) | "up" or "down" | true       |  |
+
+</details>
+
 ## Built using
 
 - Typescript
