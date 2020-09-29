@@ -39,12 +39,28 @@ npm run setup
 </HideOn>
 ```
 
+```js
+<HideScroll variant="down">
+  <div className={classNames(styles.sticky, styles.hideScrollDown)}>
+    Hidden on scrolling down
+  </div>
+</HideScroll>
+```
+
+```js
+<HideDuring>
+  <div className={classNames(styles.sticky, styles.hideDuring)}>
+    Hidden while scrolling
+  </div>
+</HideDuring>
+```
+
 ## API
 
 <details>
   <summary>HideBetween</summary>
 
-To hide an element between 2 divs or between 2 specified heights(px)
+To hide/show an element between 2 divs or between 2 specified heights(px)
 
 |     Props      | Description                                                                       | Type      | isOptional |
 | :------------: | --------------------------------------------------------------------------------- | --------- | ---------- |
@@ -64,7 +80,7 @@ To hide an element between 2 divs or between 2 specified heights(px)
 <details>
   <summary>HideOn</summary>
 
-To hide an element when reached a div or a specified height(px)
+To hide/show an element when reached a div or a specified height(px)
 
 |  Props   | Description                                                                       | Type      | isOptional |
 | :------: | --------------------------------------------------------------------------------- | --------- | ---------- |
@@ -86,7 +102,19 @@ To hide an element on scrolling up or down.
 |  Props   | Description                                                                             | Type           | isOptional |
 | :------: | --------------------------------------------------------------------------------------- | -------------- | ---------- |
 | children | The required react element that needs to be hidden                                      | ReactNode      | false      |
-| variant  | To specify whether the element must be hidden on scrolling up or down (down by default) | "up" or "down" | true       |  |
+| variant  | To specify whether the element must be hidden on scrolling up or down (down by default) | "up" or "down" | true       |
+
+</details>
+
+<details>
+  <summary>Hide</summary>
+
+To hide/show an element during a scroll. (scroll to make element hidden/shown)
+
+|  Props   | Description                                           | Type      | isOptional |
+| :------: | ----------------------------------------------------- | --------- | ---------- |
+| children | The required react element that needs to be hidden    | ReactNode | false      |
+| inverse  | Shows an element while scrolling instead of hiding it | Boolean   | true       |
 
 </details>
 
