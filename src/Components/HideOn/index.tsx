@@ -2,7 +2,7 @@ import React from "react";
 import { getOffset } from "../../util";
 import { HideOnProps, HideOnState } from "../../Interfaces";
 
-class HideBetween extends React.Component<HideOnProps, HideOnState> {
+class HideOn extends React.Component<HideOnProps, HideOnState> {
   state = {
     show: false,
   };
@@ -51,4 +51,4 @@ class HideBetween extends React.Component<HideOnProps, HideOnState> {
   }
 }
 
-export default HideBetween;
+export default HideOn;
