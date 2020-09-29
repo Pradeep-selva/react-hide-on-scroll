@@ -74,6 +74,11 @@
   left: 0;
 }
 
+.hideDuring {
+  right: 0;
+  bottom: 85vh;
+}
+
 .hideScrollDown {
   left: 0;
   bottom: 40vh;

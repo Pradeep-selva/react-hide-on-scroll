@@ -32,9 +32,15 @@ class HideDuring extends React.Component<HideDuringProps, HideDuringState> {
     this.timeout && clearTimeout(this.timeout);
 
     this.timeout = setTimeout(() => {
-      this.setState({ show: false });
-    }, 200);
+      this.setState({ show: this.props.inverse ? true : false });
+    }, 100);
   };
+
+  render() {
+    return (
+      <React.Fragment>{this.state.show && this.props.children}</React.Fragment>
+    );
+  }
 }
 
 export default HideDuring;
