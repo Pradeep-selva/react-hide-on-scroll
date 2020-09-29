@@ -74,6 +74,11 @@
   left: 0;
 }
 
+.hideScroll {
+  left: 0;
+  bottom: 25vh;
+}
+
 .hideOnDiv {
   left: 40vw;
   bottom: 85vh;

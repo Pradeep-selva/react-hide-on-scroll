@@ -12,14 +12,14 @@ interface HideState {
   prevYOffset: number;
 }
 
-class HideBetween extends React.Component<HideProps, HideState> {
+class HideScroll extends React.Component<HideProps, HideState> {
   public static defaultProps = {
-    variant: "up",
+    variant: "down",
   };
 
   state = {
     show: false,
-    prevYOffset: 0,
+    prevYOffset: window.pageYOffset,
   };
 
   componentDidMount() {
@@ -31,18 +31,20 @@ class HideBetween extends React.Component<HideProps, HideState> {
   }
 
   listenToScroll = () => {
-    const { variant, start, end } = this.props;
+    const { prevYOffset } = this.state;
+    const { variant } = this.props;
 
-    const winScroll: number =
-      document.body.scrollTop || document.documentElement.scrollTop;
+    const currentYOffset = window.pageYOffset;
 
-    if (winScroll > this.state.prevYOffset) {
+    if (prevYOffset > currentYOffset) {
       this.setState({
-        show: variant == "down",
+        show: variant === "down",
+        prevYOffset: currentYOffset,
       });
     } else {
       this.setState({
-        show: !(variant == "down"),
+        show: variant !== "down",
+        prevYOffset: currentYOffset,
       });
     }
   };
@@ -54,4 +56,4 @@ class HideBetween extends React.Component<HideProps, HideState> {
   }
 }
 
-export default HideBetween;
+export default HideScroll;
