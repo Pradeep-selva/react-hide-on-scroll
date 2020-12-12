@@ -4,10 +4,11 @@ import { HideProps, HideState } from "../../Interfaces";
 class HideScroll extends React.Component<HideProps, HideState> {
   public static defaultProps = {
     variant: "down",
+    showOnPageInit: true
   };
 
   state = {
-    show: false,
+    show: HideScroll.defaultProps.showOnPageInit && this.props.showOnPageInit,
     prevYOffset: window.pageYOffset,
   };
 
