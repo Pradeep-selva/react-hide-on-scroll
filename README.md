@@ -111,10 +111,11 @@ To hide/show an element during a scroll. (scroll to make element hidden/shown)
 
 To hide an element on scrolling up or down.
 
-|  Props   | Description                                                                             | Type           | isOptional |
-| :------: | --------------------------------------------------------------------------------------- | -------------- | ---------- |
-| children | The required react element that needs to be hidden                                      | ReactNode      | false      |
-| variant  | To specify whether the element must be hidden on scrolling up or down (down by default) | "up" or "down" | true       |
+|      Props      | Description                                                                             | Type           | isOptional |
+|     :------:    | --------------------------------------------------------------------------------------- | -------------- | ---------- |
+|     children    | The required react element that needs to be hidden                                      | ReactNode      | false      |
+|     variant     | To specify whether the element must be hidden on scrolling up or down (down by default) | "up" or "down" | true       |
+| showOnPageInit  | To specify whether the element must be visible when the component first loads           | boolean        | true       |
 
 </details>
 
