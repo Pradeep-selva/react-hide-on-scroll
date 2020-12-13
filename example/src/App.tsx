@@ -67,7 +67,7 @@ const App = () => {
         </div>
       </HideScroll>
 
-      <HideScroll variant="up" showOnPageInit={false}>
+      <HideScroll variant="up" showOnPageInit={true}>
         <div className={classNames(styles.sticky, styles.hideScrollUp)}>
           Hidden on scrolling up
         </div>
