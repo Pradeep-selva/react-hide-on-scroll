@@ -6,6 +6,7 @@ export interface HideOnProps {
   height?: number;
   atDiv?: Boolean;
   atHeight?: Boolean;
+  showOnPageInit: Boolean;
 }
 
 export interface HideOnState {

@@ -3,11 +3,16 @@ import { getOffset } from "../../util";
 import { HideOnProps, HideOnState } from "../../Interfaces";
 
 class HideOn extends React.Component<HideOnProps, HideOnState> {
+  public static defaultProps = {
+    showOnPageInit: true,
+  };
+
   state = {
     show: false,
   };
 
   componentDidMount() {
+    this.props.showOnPageInit && this.listenToScroll();
     window.addEventListener("scroll", this.listenToScroll);
   }
 

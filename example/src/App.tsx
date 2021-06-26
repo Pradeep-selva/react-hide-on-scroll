@@ -75,7 +75,16 @@ const App = () => {
 
       <HideOn divID="third">
         <div className={classNames(styles.sticky, styles.hideOnDiv)}>
-          Hidden from third div
+          Hidden from third div (shown on init)
+        </div>
+      </HideOn>
+
+      <HideOn divID="third" showOnPageInit={false}>
+        <div
+          className={classNames(styles.sticky, styles.hideOnDiv)}
+          style={{ left: 0, top: "18vh" }}
+        >
+          Hidden from third div (hidden on init)
         </div>
       </HideOn>
 
