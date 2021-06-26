@@ -82,15 +82,16 @@ To hide/show an element between 2 divs or between 2 specified heights(px)
 
 To hide/show an element when reached a div or a specified height(px)
 
-|  Props   | Description                                                                       | Type      | isOptional |
-| :------: | --------------------------------------------------------------------------------- | --------- | ---------- |
-| children | The required react element that needs to be hidden                                | ReactNode | false      |
-|  atDiv   | To start hiding at a div                                                          | boolean   | true       |
-| atHeight | To start hiding at a height                                                       | boolean   | true       |
-| inverse  | Specifying this will show the element instead of hiding, in specified breakpoints | boolean   | true       |
-|  divID   | ID of the div to start hiding from                                                | string    | true       |
-|  offset  | To set an offset on the hiding position(in pixels) -- usable only with div prop   | number    | true       |
-|  height  | Height from where hiding must begin (in pixels)                                   | number    | true       |
+|     Props      | Description                                                                       | Type      | isOptional |
+| :------------: | --------------------------------------------------------------------------------- | --------- | ---------- |
+|    children    | The required react element that needs to be hidden                                | ReactNode | false      |
+|     atDiv      | To start hiding at a div                                                          | boolean   | true       |
+|    atHeight    | To start hiding at a height                                                       | boolean   | true       |
+|    inverse     | Specifying this will show the element instead of hiding, in specified breakpoints | boolean   | true       |
+|     divID      | ID of the div to start hiding from                                                | string    | true       |
+|     offset     | To set an offset on the hiding position(in pixels) -- usable only with div prop   | number    | true       |
+|     height     | Height from where hiding must begin (in pixels)                                   | number    | true       |
+| showOnPageInit | To specify whether the element must be visible when the component first loads     | boolean   | true       |
 
 </details>
 
@@ -111,11 +112,11 @@ To hide/show an element during a scroll. (scroll to make element hidden/shown)
 
 To hide an element on scrolling up or down.
 
-|      Props      | Description                                                                             | Type           | isOptional |
-|     :------:    | --------------------------------------------------------------------------------------- | -------------- | ---------- |
-|     children    | The required react element that needs to be hidden                                      | ReactNode      | false      |
-|     variant     | To specify whether the element must be hidden on scrolling up or down (down by default) | "up" or "down" | true       |
-| showOnPageInit  | To specify whether the element must be visible when the component first loads           | boolean        | true       |
+|     Props      | Description                                                                             | Type           | isOptional |
+| :------------: | --------------------------------------------------------------------------------------- | -------------- | ---------- |
+|    children    | The required react element that needs to be hidden                                      | ReactNode      | false      |
+|    variant     | To specify whether the element must be hidden on scrolling up or down (down by default) | "up" or "down" | true       |
+| showOnPageInit | To specify whether the element must be visible when the component first loads           | boolean        | true       |
 
 </details>
 
