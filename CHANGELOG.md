@@ -8,4 +8,4 @@
 - **[1.1.3]** <u>Features:</u> showPageOnInit prop added on Hide Component
 - **[1.1.4]**
   <u>Bug Fixes:</u> HideOn children visible by default on fresh load.;
-  <u>Features: </u>showPageOnInit prop added on Hide Component;
+  <u>Features: </u>showPageOnInit prop added on HideOn Component;
